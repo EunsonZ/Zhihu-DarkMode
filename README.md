@@ -4,9 +4,15 @@
 
 ## 安装
 
+Requirement:启用developer mode.
+
 1. 从 [Releases](https://github.com/EunsonZ/Zhihu-DarkMode/releases) 下载压缩包并解压。
 2. 在 Chrome 打开 `chrome://extensions/`，启用「开发者模式」。
 3. 点击「加载已解压的扩展程序」，选择含 `manifest.json` 的文件夹，再刷新知乎页面。
+
+OR
+
+直接拖动.zip文件至extensions页面
 
 ## 开关
 
