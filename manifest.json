@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "知乎 · 柔和夜间模式",
+  "version": "0.1.0",
+  "description": "知乎本地深灰夜间模式。保留图片原色，提供页面和工具栏开关。",
+  "permissions": ["storage"],
+  "action": {
+    "default_title": "知乎夜间模式",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [{
+    "matches": ["https://www.zhihu.com/*", "https://zhihu.com/*", "https://zhuanlan.zhihu.com/*"],
+    "exclude_matches": ["https://www.zhihu.com/signin*", "https://www.zhihu.com/signup*", "https://www.zhihu.com/settings/*", "https://www.zhihu.com/creator/*"],
+    "css": ["theme.css"],
+    "js": ["core.js", "content.js"],
+    "run_at": "document_start",
+    "world": "ISOLATED"
+  }]
+}

@@ -1,0 +1,132 @@
+/* All page overrides are gated by our own root attribute. Disabling removes it. */
+html[data-zhn-enabled="true"] {
+  color-scheme: dark !important;
+  --zhn-page: #1b1e23;
+  --zhn-surface: #242830;
+  --zhn-raised: #2d333d;
+  --zhn-inset: #20242b;
+  --zhn-text: #dce1e8;
+  --zhn-muted: #abb4c0;
+  --zhn-line: #3b4350;
+  --zhn-link: #7aaeff;
+  --flag-light: ;
+  --flag-dark: initial;
+  --MapUIFrame10C: var(--zhn-page) !important;
+  --MapUIFrame09C: var(--zhn-page) !important;
+  --MapUIFrame99A: var(--zhn-surface) !important;
+  --MapUIFrame99C: var(--zhn-raised) !important;
+  --MapUIFrame10A: var(--zhn-inset) !important;
+  --MapUIFrame09A: var(--zhn-line) !important;
+  --MapUIFrame09B: var(--zhn-inset) !important;
+  --MapUIFrame08A: var(--zhn-line) !important;
+  --MapUIFrame03C: var(--zhn-muted) !important;
+  --MapUIFrame10C_dark: var(--zhn-page) !important;
+  --MapUIFrame99A_dark: var(--zhn-surface) !important;
+  --MapUIFrame99C_dark: var(--zhn-raised) !important;
+  --MapText02A: var(--zhn-text) !important;
+  --MapText03A: #c8cfd9 !important;
+  --MapText04A: var(--zhn-muted) !important;
+  --MapText05A: var(--zhn-muted) !important;
+  --MapText06A: var(--zhn-muted) !important;
+  --MapText07A: #969fac !important;
+  --MapText02A_dark: var(--zhn-text) !important;
+  --MapText03A_dark: #c8cfd9 !important;
+  --MapText04A_dark: var(--zhn-muted) !important;
+  --MapInfo: var(--zhn-link) !important;
+  --MapInfoSub: var(--zhn-muted) !important;
+  --MapLink: var(--zhn-link) !important;
+  --rv-background-color: var(--zhn-page) !important;
+  --rv-background-color-light: var(--zhn-surface) !important;
+  --rv-popup-background-color: var(--zhn-raised) !important;
+  --rv-text-color: var(--zhn-text) !important;
+  --rv-text-color-2: var(--zhn-muted) !important;
+  --rv-border-color: var(--zhn-line) !important;
+  background-color: var(--zhn-page) !important;
+}
+html[data-zhn-enabled="true"] body {
+  background-color: var(--zhn-page) !important;
+  color: var(--zhn-text) !important;
+}
+html[data-zhn-enabled="true"] :is(
+  .AppHeader,.QuestionHeader,.Card,.HotList,.HotItem,
+  .SearchTabs,.SearchResult-Card,.ProfileMain,.ColumnPageHeader,
+  .ContentItem-actions.is-fixed,.ContentItem-actions.is-sticky,
+  .Post-content .ContentItem-actions,.WriteArea
+) {
+  background-color: var(--zhn-surface) !important;
+  color: var(--zhn-text) !important;
+  border-color: var(--zhn-line) !important;
+}
+html[data-zhn-enabled="true"] :is(.AppHeader,.ColumnPageHeader) { transition: none !important; }
+html[data-zhn-enabled="true"] .AppHeader nav a { color: #c8cfd9 !important; }
+html[data-zhn-enabled="true"] .AppHeader nav a.is-active { color: var(--zhn-text) !important; }
+html[data-zhn-enabled="true"] :is(
+  .ContentItem-title,.QuestionHeader-title,.Post-Title,.ProfileHeader-name,
+  .AuthorInfo-name,.AnswerAuthor-user-name,.AuthorCard-user-name,
+  .HotItem-title,.TopicMetaCard-title,.NumberBoard-itemValue,.List-headerText
+) { color: var(--zhn-text) !important; }
+html[data-zhn-enabled="true"] :is(
+  .ContentItem-meta,.ContentItem-time,.AuthorInfo-detail,.HotItem-excerpt,
+  .HotItem-metrics,.SearchItem-time,.NumberBoard-itemName,.Tabs-meta,
+  .ProfileHeader-headline,.TopicMetaCard-description
+) { color: var(--zhn-muted) !important; }
+html[data-zhn-enabled="true"] :is(.ContentItem-title a,.AuthorInfo-name a,.RichText a:not(.LinkCard)) {
+  color: var(--zhn-link) !important;
+}
+html[data-zhn-enabled="true"] :is(.ContentItem-title a:hover,.RichText a:not(.LinkCard):hover) { text-decoration: underline; }
+html[data-zhn-enabled="true"] :is(.Tabs-link,.Select-button,.Menu-item,.Button--plain) { color: var(--zhn-muted); }
+html[data-zhn-enabled="true"] .Tabs-link.is-active { color: var(--zhn-text) !important; }
+html[data-zhn-enabled="true"] :is(.Card-section,.Card-header,.List-header,.List-item,.HotItem,.Topic-bar) { border-color: var(--zhn-line) !important; }
+html[data-zhn-enabled="true"] :is(.Popover-content,.Menu,.Select-list,.Modal-inner,.Modal-content,div:has(> .Modal-content)) {
+  background-color: var(--zhn-raised) !important;
+  color: var(--zhn-text) !important;
+  border-color: var(--zhn-line) !important;
+}
+html[data-zhn-enabled="true"] .Popover-arrow:after { background: var(--zhn-raised) !important; border-color: var(--zhn-line) !important; }
+html[data-zhn-enabled="true"] :is(.Menu-item:hover,.Select-option:hover) { background: #374151 !important; }
+html[data-zhn-enabled="true"] :is(.Comments-container,.CommentsV2,.CommentListV2,.CommentEditorV2) {
+  background-color: var(--zhn-surface) !important;
+  color: var(--zhn-text) !important;
+  border-color: var(--zhn-line) !important;
+}
+html[data-zhn-enabled="true"] :is(.CommentContent,.CommentItemV2-content) { color: var(--zhn-text) !important; }
+html[data-zhn-enabled="true"] :is(.Input-wrapper,input:not([type=checkbox]):not([type=radio]):not([type=range]),textarea,[contenteditable=true]) {
+  background-color: var(--zhn-inset) !important;
+  color: var(--zhn-text) !important;
+  caret-color: var(--zhn-link) !important;
+  border-color: var(--zhn-line) !important;
+}
+html[data-zhn-enabled="true"] :is(input,textarea)::placeholder { color: #969fac !important; opacity: 1; }
+html[data-zhn-enabled="true"] .SearchBar-searchButton.Button--primary.Button--blue { color: #fff !important; }
+html[data-zhn-enabled="true"] :is(.RichText,.QuestionRichText,.Post-RichText) { color: var(--zhn-text) !important; }
+html[data-zhn-enabled="true"] :is(.RichText pre,.RichText code,.LinkCard) {
+  background-color: var(--zhn-inset) !important;
+  color: var(--zhn-text) !important;
+  border-color: var(--zhn-line) !important;
+}
+html[data-zhn-enabled="true"] :is(.LinkCard-title,.LinkCard-contents) { color: var(--zhn-text) !important; }
+html[data-zhn-enabled="true"] :is(.LinkCard-desc,.RichText blockquote) { color: var(--zhn-muted) !important; }
+html[data-zhn-enabled="true"] .RichText blockquote { border-color: var(--zhn-line) !important; }
+html[data-zhn-enabled="true"] :is(.Catalog,.Catalog > *,.Catalog button) { background: var(--zhn-raised) !important; color: var(--zhn-muted) !important; }
+html[data-zhn-enabled="true"] :is(.RichText table,.RichText td,.RichText th) { border-color: var(--zhn-line) !important; }
+html[data-zhn-enabled="true"] .RichText th { background-color: var(--zhn-raised) !important; }
+html[data-zhn-enabled="true"] :is(.hljs-comment,.hljs-quote,.token.comment,.token.prolog) { color: #9daabd !important; }
+html[data-zhn-enabled="true"] :is(.hljs-keyword,.hljs-selector-tag,.token.keyword) { color: #c7a4ef !important; }
+html[data-zhn-enabled="true"] :is(.hljs-string,.hljs-attr,.token.string,.token.attr-value) { color: #9dccad !important; }
+html[data-zhn-enabled="true"] :is(.hljs-number,.hljs-literal,.token.number,.token.boolean) { color: #efbb8b !important; }
+html[data-zhn-enabled="true"] :is(.hljs-title,.hljs-function,.token.function) { color: #8fbaff !important; }
+html[data-zhn-enabled="true"] .Highlight em { color: #f28d89 !important; }
+html[data-zhn-enabled="true"] .VoteButton { background-color: #7aaeff1a !important; color: var(--zhn-link) !important; }
+html[data-zhn-enabled="true"] .VoteButton.is-active { background-color: #416fab !important; color: #fff !important; }
+html[data-zhn-enabled="true"] .Button--blue:not(.Button--primary) { color: var(--zhn-link) !important; border-color: #5582b5 !important; }
+html[data-zhn-enabled="true"] .Button--primary.Button--blue { color: #fff !important; }
+/* Annotations address generated CSS classes without coupling to their hashes. */
+html[data-zhn-enabled="true"] [data-zhn-bg="surface"] { background-color: var(--zhn-surface) !important; }
+html[data-zhn-enabled="true"] [data-zhn-bg="inset"] { background-color: var(--zhn-inset) !important; }
+html[data-zhn-enabled="true"] [data-zhn-fg="text"] { color: var(--zhn-text) !important; }
+html[data-zhn-enabled="true"] [data-zhn-fg="muted"] { color: var(--zhn-muted) !important; }
+html[data-zhn-enabled="true"] [data-zhn-fg="link"] { color: var(--zhn-link) !important; }
+html[data-zhn-enabled="true"] [data-zhn-border="line"] { border-color: var(--zhn-line) !important; }
+html[data-zhn-enabled="true"] [data-zhn-gradient="surface"] { background-image: none !important; background-color: var(--zhn-surface) !important; }
+html[data-zhn-enabled="true"] ::selection { background: #416fab; color: #fff; }
+html[data-zhn-enabled="true"] :focus-visible { outline-color: var(--zhn-link); }
