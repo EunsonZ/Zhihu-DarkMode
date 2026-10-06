@@ -19,7 +19,7 @@
 
 AI 声明：本项目由 AI 辅助编写。
 
-浏览器范围：仅面向 Google Chrome；本地 Chrome 安装测试待完成。
+浏览器范围：仅面向 Google Chrome；本地 Chrome 测试表现良好。
 
 ## 许可
 
